@@ -1,0 +1,155 @@
+﻿Category,Name,Introduc,Explanation,Symbol,Data Source,Display
+Macro,Continued Claims Jobless,持续申领失业金人数,存量数据,CCSA,fred,n
+Macro,Initial Claims Jobless,初领失业金人数,增量数据,ICSA,fred,n
+Macro,Mortgage-Backed Securities,抵押债券,不动产抵押贷款证券，资产抵押债券的一种,WSHOMCB,fred,n
+Macro,Federal Agency Securities,联邦机构证券,这些证券由抵押贷款支持，由于它们是由美国政府赞助的这些特定公司创建的，,FEDDT,fred,n
+Macro,Central Bank Liquidity Swaps,流动性互换,中央银行流动性互换是一种货币互换，由一个国家的中央银行用来向另一个国家的中央银行提供其货币的流动性。,SWPT,fred,n
+Macro,U.S. Treasury,全部国债,美国国库证券是美国财政部发行的公债,TREAST,fred,n
+Macro,Weekly Economic Index,经济指数,小于零经济衰退,WEI,fred,n
+Macro,CPI,居民物价消费指数,-,CPIAUCSL,fred,n
+Macro,10 Year Real Yield,10期国债收益,-,DGS10,fred,n
+Macro,5 Year Real Yield,5期国债收益,-,DGS5,fred,n
+Macro,Federal Funds Rate,联邦利率,-,FEDFUNDS,fred,n
+Rates&Yields,Fed.Effective Rate,联邦利率,-,EFFR,fred,y
+Rates&Yields,UST 5Y Yield,5年期国债利率,5年期美元借贷利率,^FVX,yahoo,y
+Rates&Yields,UST 10Y Yield,10年期国债利率,10年期美元借贷利率,^TNX,yahoo,y
+Rates&Yields,TIPs 10Y Rate,10年期通胀保护证券,通胀联系债卷收益率,DFII10,fred,y
+Rates&Yields,Libor USD O/N,隔夜美元LIBOR利率,短期美元借贷利率,USDONTD156N,fred,y
+Rates&Yields,Libor USD 3M,3个月美元伦敦银行同业拆借利率,3个月期美元借贷利率,USD3MTD156N,fred,y
+Supply & Demand,Fed.Open Market Holdings,美联储公开市场持仓,-,TREAST,fred,y
+Supply & Demand,Financial Condition,无风险利率,无风险利率，汇率，股票估值和信贷息差的加权平均值，其权重对应于每个变量对GDP的直接影响,NFCI,fred,y
+Supply & Demand,NYSE Volume Index,-,-,^NYA,yahoo,y
+Supply & Demand,NASDAQ Volume Index,-,-,^IXIC,yahoo,y
+Supply & Demand,Smart Money Index,-,-,-,-,n
+Supply & Demand,Stock ETF-Flow,-,股票ETF,-,-,n
+Supply & Demand,Bond ETF-Flow,-,债券ETF,-,-,n
+Risk Gauges,HYG,高息债,高利率债券,HYG,yahoo,n
+Risk Gauges,LQD,低息债,投资级债券,LQD,yahoo,n
+Risk Gauges,HYG/LQD,-,-,HYG/LQD,own,y
+Risk Gauges,JPY/USD,日元/美元,避险货币,JPYUSD=X,yahoo,y
+Risk Gauges,Gold,黄金,避险商品,GLD,yahoo,y
+Risk Gauges,S&P 500 INDEX,标普500,标普500,^SPX,yahoo,n
+Risk Gauges,Banks,银行,-,^BKX,yahoo,n
+Risk Gauges,Banks/SPX,银行/标普,银行/标普,^BKX/^SPX,own,y
+Risk Gauges,Real Estate,房产,-,VNQ,yahoo,n
+Risk Gauges,Real Estate/SPX,房产/标普,房产/标普,VNQ/^SPX,own,y
+Risk Gauges,Trans.,交通,-,XTN,yahoo,n
+Risk Gauges,Trans./SPX,交通/标普,交通/标普,XTN/^SPX,own,y
+Risk Gauges,High Div,高分红股票,风险,HDV,yahoo,n
+Risk Gauges,High Div./SPX,高分红股票/标普,风险,HDV/^SPX,own,y
+Risk Gauges,High Yield,高收益股票,风险,HYG,yahoo,n
+Risk Gauges,High Yield/SPX,高收益股票/标普,风险,HYG/^SPX,own,y
+Currency,USD Index,美元指数,-,DX-Y.NYB,yahoo,y
+Currency,EUR,欧元指数,-,EURUSD=X,yahoo,y
+Currency,JPY,日元指数,-,JPYUSD=X,yahoo,y
+Currency,GBP,英镑指数,-,GBPUSD=X,yahoo,y
+Currency,CAD,加元指数,-,CADUSD=X,yahoo,y
+Currency,MXN,模型比索指数,-,MXNUSD=X,yahoo,y
+Currency,AUD,澳元指数,-,AUDUSD=X,yahoo,y
+Currency,VND,越南盾指数,-,VNDUSD=X,yahoo,y
+Currency,KRW,韩元指数,-,KRWUSD=X,yahoo,y
+Currency,CNY,人民币指数,-,CNYUSD=X,yahoo,y
+Currency,INR,印度卢比指数,-,INRUSD=X,yahoo,y
+Currency,Bitcoin,比特币指数,-,BTC-USD,yahoo,y
+Energy,WTI Crude,原油期货,通胀,CL=F,yahoo,y
+Energy,Brent,布伦特原油期货,通胀,BZ=F,yahoo,y
+Energy,Gasoline,无铅汽油期货,通胀,RB=F,yahoo,y
+Energy,Natural Gas,天然气期货,通胀,NG=F,yahoo,y
+Precious,Glod,黄金期货,情绪,GC=F,yahoo,y
+Precious,Silver,白银期货,情绪,SI=F,yahoo,y
+Precious,Platinum,铂金期货,情绪,PL=F,yahoo,y
+Precious,Palladium,钯金期货,情绪,PA=F,yahoo,y
+Metal,Copper,铜期货,需求,HG=F,yahoo,y
+Metal,LME Copper,伦铜,需求,-,-,y
+Metal,LME Aluminum,伦铝,需求,-,-,y
+Metal,LME Lead,伦铅,需求,-,-,y
+Metal,LME Nickel,伦镍,需求,-,-,y
+Metal,LME Tin,伦锡,需求,-,-,y
+Fundamental,Oil/Gold,油金比,通胀预期,CL=F/GC=F,own,y
+Fundamental,Copper/Gold,铜金比,经济活跃度,HG=F/GC=F,own,y
+Fundamental,Eco. Surprise,经济预期,经济预期,-,-,y
+Fundamental,Eco. Uncertainty,经济不确定性,经济不确定性,USEPUINDXD,fred,y
+Agriculture,Corn,玉米,供给,ZC=F,yahoo,y
+Agriculture,Wheat,小麦,供给,ZW=F,yahoo,y
+Agriculture,Soybean,大豆,供给,ZS=F,yahoo,y
+Agriculture,Palm Oil,棕榈油,供给,-,-,y
+Agriculture,Coffee,咖啡,供给,KC=F,yahoo,y
+Agriculture,Sugar,糖,供给,SB=F,yahoo,y
+Agriculture,Cotton,棉花,供给,CT=F,yahoo,y
+Agriculture,Cocoa,可可,供给,CC=F,yahoo,y
+Agriculture,Live Catttle,活牛,供给,LE=F,yahoo,y
+Broad Market,Total Market,总体市场指数,-,VTI,yahoo,y
+Broad Market,DJI30,工业平均指数,-,DIA,yahoo,y
+Broad Market,S&P 100,标普100,-,OEF,yahoo,y
+Broad Market,S&P 400,标普400,-,MDY,yahoo,y
+Broad Market,S&P 500,标普500,-,SPY,yahoo,y
+Broad Market,S&P 500 EQ,标普500 等权重,-,RSP,yahoo,y
+Broad Market,Nasdaq 100,纳斯达克 100,-,QQQ,yahoo,y
+Broad Market,Nasdaq 100 Tech,纳斯达克 100 科技股,-,QTEC,yahoo,y
+Broad Market,FANGMAN,-,-,-,-,y
+Broad Market,Russell 1000,罗素 1000,小型资本,IWB,yahoo,y
+Broad Market,Russell 2000,罗素 2000,小型资本,IWM,yahoo,y
+Factors,Momentum,动量因子,追涨,MTUM,yahoo,y
+Factors,Value,价值因子,价值投资,VLUE,yahoo,y
+Factors,Quality,质量因子,优质企业,QUAL,yahoo,y
+Factors,Low Volatility,最小成交量,低波动率股票,USMV,yahoo,y
+Growth or Value,Russell 1000 Growth,罗素1000 成长,成长股,IWF,yahoo,y
+Growth or Value,Russell 1000 Value,罗素1000 价值,价值股,IWD,yahoo,y
+Growth or Value,S&P 500 Growth,标普500 成长,成长股,IVW,yahoo,y
+Growth or Value,S&P 500 Value,标普500 价值,价值股,IVE,yahoo,y
+Thematic,Wide Moat,-,-,MOAT,yahoo,y
+Thematic,CANSLIM,-,-,FFTY,yahoo,y
+Thematic,Online Retail,-,-,IBUY,yahoo,y
+Thematic,Cyber Security,-,-,HACK,yahoo,y
+Thematic,Cloud,-,-,SKYY,yahoo,y
+Thematic,Mobile Payment,-,-,IPAY,yahoo,y
+Thematic,FinTech,-,-,FINX,yahoo,y
+Thematic,Exponential Tech,-,-,XT,yahoo,y
+Thematic,Disruptive Innovation,-,-,ARKK,yahoo,y
+Thematic,Robotics&A.I.,-,-,BOTZ,yahoo,y
+Thematic,Agribusiness,-,-,MOO,yahoo,y
+Thematic,Genomic Revolution,-,-,ARKG,yahoo,y
+Thematic,Marijuana,-,-,MJ,yahoo,y
+Thematic,Next Gen.  Internet,-,-,ARKW,yahoo,y
+Thematic,Autonomous Tech,-,-,ARKQ,yahoo,y
+Thematic,Clean Energy,-,-,PBW,yahoo,y
+Thematic,Blockchain Tech,-,-,BLOK,yahoo,y
+Thematic,Internet Of Thins,-,-,SNSR,yahoo,y
+Industry,Communications,通讯技术,-,XLC,yahoo,y
+Industry,Consumer Disc.,-,-,XLY,yahoo,y
+Industry,Home Builders,房屋建筑商,-,XHB,yahoo,y
+Industry,Retail,零售,-,XRT,yahoo,y
+Industry,Consumer Staples,消费必需品,-,XLP,yahoo,y
+Industry,Energe,-,-,XLE,yahoo,y
+Industry,Oil&Gas Explorator,-,-,XOP,yahoo,y
+Industry,Oil Service,-,-,OIH,yahoo,y
+Industry,Solar,-,-,TAN,yahoo,y
+Industry,Nuclear,-,-,URA,yahoo,y
+Industry,Financial,-,-,XLF,yahoo,y
+Industry,Banks,-,-,KBE,yahoo,y
+Industry,Insurance,-,-,KIE,yahoo,y
+Industry,Brokers,-,-,IAI,yahoo,y
+Industry,Healthcare,-,-,XLV,yahoo,y
+Industry,Biotech,-,-,IBB,yahoo,y
+Industry,Medical Devices,-,-,IHI,yahoo,y
+Industry,Healthcare Providers,-,-,IHF,yahoo,y
+Industry,Pharmaceuticals,-,-,XPH,yahoo,y
+Industry,Industrials,-,-,XLI,yahoo,y
+Industry,Aero&Defence,-,-,ITA,yahoo,y
+Industry,Transportation,-,-,IYT,yahoo,y
+Industry,Global Jets,-,-,JETS,yahoo,y
+Industry,Materials,-,-,XLB,yahoo,y
+Industry,Gold Miners,-,-,GDX,yahoo,y
+Industry,Metals Mining,-,-,XME,yahoo,y
+Industry,Lithium Battery,-,-,LIT,yahoo,y
+Industry,Real Estate,-,-,XLRE,yahoo,y
+Industry,REIT US,-,-,VNQ,yahoo,y
+Industry,REIT Global ex.US,-,-,VNQI,yahoo,y
+Industry,Mortgage,-,-,REM,yahoo,y
+Industry,Technologe,-,-,XLK,yahoo,y
+Industry,I.T.,-,-,VGT,yahoo,y
+Industry,Internet,-,-,FDN,yahoo,y
+Industry,Social Media,-,-,SOCL,yahoo,y
+Industry,Software & SaaS,-,-,IGV,yahoo,y
+Industry,Semiconductors,-,-,SOXX,yahoo,y
+Industry,Utilities,-,-,XLU,yahoo,y
