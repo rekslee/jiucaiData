@@ -26,7 +26,7 @@ app = dash.Dash(
     url_base_pathname="/")
 auth = dash_auth.BasicAuth(app,VALID_USERNAME_PASSWORD_PAIRS)
 app.scripts.config.serve_locally = True
-app.run(debug=True)
+app.debug=True
 # cache = Cache(app.server, config={
 #     'CACHE_TYPE': 'filesystem',
 #     'CACHE_DIR': 'cache-directory'
