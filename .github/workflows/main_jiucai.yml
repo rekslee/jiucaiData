@@ -31,4 +31,4 @@ jobs:
       with:
         app-name: 'jiucai'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0cc0f64970a64426b3f511495f3d51d9 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_dd620f72ae264250ab0312f8d3bf0aba }}
