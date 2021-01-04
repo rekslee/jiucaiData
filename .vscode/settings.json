@@ -1,5 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\v_stonelyli\\AppData\\Local\\Programs\\Python\\Python37\\python.exe",
     "appService.zipIgnorePattern": [
         "__pycache__{,/**}",
         "*.py[cod]",
@@ -30,5 +29,6 @@
         "env.bak{,/**}",
         "venv.bak{,/**}",
         ".vscode{,/**}"
-    ]
+    ],
+    "appService.defaultWebAppToDeploy": "None"
 }

@@ -13,20 +13,23 @@ import pandas as pd
 from datas import date, symbol_data, sql_data
 from config.config import * 
 # from flask_caching import Cache
-from flask import Flask
+# from flask import Flask
 VALID_USERNAME_PASSWORD_PAIRS = [['reks', 'wind']]
-server = Flask(__name__)
-server.config.update(DEBUG=True)  
-server.debug=True
+# server = Flask(__name__)
+# server.config.update(DEBUG=True)  
+# server.debug=True
 app = dash.Dash(
     __name__, 
     external_stylesheets=[dbc.themes.BOOTSTRAP], 
     suppress_callback_exceptions=True,
-    server=server,
-    url_base_pathname="/")
+    # server=server,
+    # url_base_pathname="/"
+    )
 auth = dash_auth.BasicAuth(app,VALID_USERNAME_PASSWORD_PAIRS)
 app.scripts.config.serve_locally = True
-app.debug=True
+server = app.server
+
+# app.debug=True
 # cache = Cache(app.server, config={
 #     'CACHE_TYPE': 'filesystem',
 #     'CACHE_DIR': 'cache-directory'
@@ -126,6 +129,8 @@ def get_dict_from_store(data):
     return data
 
 
-@server.route("/")
-def jiucai():
-    return app.index()
+# @server.route("/")
+# def jiucai():
+#     return app.index()
+if __name__ == '__main__':
+    app.run_server(debug=True)
