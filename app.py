@@ -4,14 +4,14 @@ import dash
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
 import dash_html_components as html
-from dash.dependencies import Input, Output,State
+from dash.dependencies import Input, Output
 from apps import data_dict, macro_data, fed, panoramic,martket_breadth
 from datas import date, symbol_data
 from config.config import * 
 
 path=os.path.abspath('.')   
 sys.path.append(path)
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True,)
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True,title='韭菜数据--美股市场宽度和全景图',update_title='刷新中')
 
 navbar = dbc.NavbarSimple(
     children=[
@@ -84,4 +84,4 @@ server = app.server
 app.layout = serve_layout()
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
