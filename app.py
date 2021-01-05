@@ -14,20 +14,10 @@ from datas import date, symbol_data, sql_data
 from config.config import * 
 # from flask_caching import Cache
 # from flask import Flask
-VALID_USERNAME_PASSWORD_PAIRS = [['reks', 'wind']]
-# server = Flask(__name__)
-# server.config.update(DEBUG=True)  
-# server.debug=True
-app = dash.Dash(
-    __name__, 
-    external_stylesheets=[dbc.themes.BOOTSTRAP], 
-    suppress_callback_exceptions=True,
-    # server=server,
-    # url_base_pathname="/"
-    )
-auth = dash_auth.BasicAuth(app,VALID_USERNAME_PASSWORD_PAIRS)
-app.scripts.config.serve_locally = True
-server = app.server
+
+
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True,)
+# auth = dash_auth.BasicAuth(app,(('jiucai','wind')))
 
 # app.debug=True
 # cache = Cache(app.server, config={
@@ -36,7 +26,7 @@ server = app.server
 # })
 navbar = dbc.NavbarSimple(
     children=[
-        dcc.Interval(id="time-interval", n_intervals=0, interval=1000*60*60*6),
+        dcc.Interval(id="time-interval", n_intervals=0, interval=1000*60*60*1),
         dbc.NavItem(dbc.NavLink("宏观经济",href="/page-1",active=True,id="page-1-link")),
         dbc.NavItem(dbc.NavLink("联储数据", href="/page-2", id="page-2-link")),
         dbc.NavItem(dbc.NavLink("市场宽度", href="/page-3", id="page-3-link")),
@@ -68,9 +58,8 @@ def serve_layout():
     dbc.Spinner(html.Div(id="loading-output")),
     html.Div(children=[dcc.Location(id="url"),html.Div(id="page-content")],className="container-fluid"),
     jumbotron,
-    
 ],id='serve-layout',className = 'p-5')
-app.layout = serve_layout()
+
 
 # 定时更新数据库
 @app.callback(Output("update-time", "children"),Input("time-interval", "n_intervals"),prevent_initial_call=True)
@@ -104,8 +93,6 @@ def display_page(pathname):
         return data_dict.page, ''
     return dbc.Jumbotron([html.H1("404: Not found", className="text-danger"),html.Hr()]), ''
 
-
-
 # 储存数据字典
 @app.callback(
     Output('dict-store', 'data'),
@@ -128,7 +115,9 @@ def update_dict_to_DB(data_timestamp,data):
 def get_dict_from_store(data):
     return data
 
-
+app.scripts.config.serve_locally = True
+server = app.server
+app.layout = serve_layout()
 # @server.route("/")
 # def jiucai():
 #     return app.index()
