@@ -37,8 +37,8 @@ def table_style(df):
                             'column_id':col
                         },
                         'backgroundColor':'rgba(40, 180, 99  ,{})'.format(t),
-                        'color':'MidnightBlue',
                         'border': '0px solid rgba(40, 180, 99  ,{})'.format(t),
+                        # 'color':'MidnightBlue',
                     })
                 t = round(t-0.09,2)
             else:
@@ -49,7 +49,7 @@ def table_style(df):
                         },
                         'backgroundColor':'rgba(244, 67, 54   ,{})'.format(t),
                         'border': '0px solid rgba(244, 67, 54   ,{})'.format(t),
-                        'color':'MidnightBlue'
+                        # 'color':'MidnightBlue'
                     })
                 t = round(t+0.09,2)
             num -= x/20
@@ -71,7 +71,7 @@ page = html.Div(
         data=df.to_dict('records'),
         style_header={'backgroundColor': 'gold','fontWeight': 'bold','textAlign': 'center','height': '60px','whiteSpace': 'normal',},
         style_table={'width': 'auto'},
-        style_cell={'width': '55px','fontSize': 18,'textAlign': 'center','height': '40px','font-family':'Segoe UI'},
+        style_cell={'width': '55px','fontSize': 16,'textAlign': 'center','height': '50px','font-family':'Segoe UI'},
         style_data_conditional=table_style(df),
         )
 

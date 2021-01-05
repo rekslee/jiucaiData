@@ -38,8 +38,7 @@ jumbotron = dbc.Jumbotron(
             ],fluid=True,
         )
     ],fluid=True,)
-def serve_layout():
-    return html.Div(children=[
+app.layout = html.Div(children=[
     navbar,
     html.Br(),
     dbc.Spinner(html.Div(id="loading-output"),color="primary",size="lg",fullscreen=True),
@@ -81,7 +80,7 @@ def display_page(pathname):
 
 app.scripts.config.serve_locally = True
 server = app.server
-app.layout = serve_layout()
+# app.layout = serve_layout()
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server(debug=True)
