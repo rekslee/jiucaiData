@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 import dash_core_components as dcc
 import dash_html_components as html
-import os, sys
-path=os.path.abspath('.')   
-sys.path.append(path)
+import os
 from datas import sql_data
 from config.config import *
+import pandas as pd
 
+path=os.path.abspath('.') 
+dictDF = pd.read_csv(path + "/config/financial_data_dict.csv")
 
 table_1 = 'TREAST'
 table_2 = 'FEDDT'
@@ -18,9 +19,6 @@ treast = sql_data.readDB(financeDB, table_1)
 feddt = sql_data.readDB(financeDB, table_2)
 wshomcb = sql_data.readDB(financeDB, table_3)
 swpt = sql_data.readDB(financeDB, table_4)
-
-dictDB = '{}/datas/db/{}.db'.format(path, config.get('database','data_dict'))
-dictDF =sql_data.readDB(dictDB, config.get('tablename','data_dict'))
 
 info1 = dictDF.loc[dictDF['Symbol'] == table_1]['Introduc'].values[0]
 info2 = dictDF.loc[dictDF['Symbol'] == table_2]['Introduc'].values[0]

@@ -9,7 +9,7 @@ Macro,Weekly Economic Index,经济指数,小于零经济衰退,WEI,fred,n
 Macro,CPI,居民物价消费指数,-,CPIAUCSL,fred,n
 Macro,10 Year Real Yield,10期国债收益,-,DGS10,fred,n
 Macro,5 Year Real Yield,5期国债收益,-,DGS5,fred,n
-Macro,Federal Funds Rate,联邦利率,-,FEDFUNDS,fred,n
+Macro,Federal Funds Rate,联邦利率,-,FEDFUNDS,fred,y
 Rates&Yields,Fed.Effective Rate,联邦利率,-,EFFR,fred,y
 Rates&Yields,UST 5Y Yield,5年期国债利率,5年期美元借贷利率,^FVX,yahoo,y
 Rates&Yields,UST 10Y Yield,10年期国债利率,10年期美元借贷利率,^TNX,yahoo,y
@@ -21,10 +21,10 @@ Supply & Demand,Financial Condition,无风险利率,无风险利率，汇率，�
 Supply & Demand,NYSE Volume Index,-,-,^NYA,yahoo,y
 Supply & Demand,NASDAQ Volume Index,-,-,^IXIC,yahoo,y
 Supply & Demand,Smart Money Index,-,-,-,-,n
-Supply & Demand,Stock ETF-Flow,-,股票ETF,-,-,n
-Supply & Demand,Bond ETF-Flow,-,债券ETF,-,-,n
-Risk Gauges,HYG,高息债,高利率债券,HYG,yahoo,n
-Risk Gauges,LQD,低息债,投资级债券,LQD,yahoo,n
+Supply & Demand,Stock ETF-Flow,股票ETF,股票ETF,-,-,n
+Supply & Demand,Bond ETF-Flow,债券ETF,债券ETF,-,-,n
+Risk Gauges,HYG,高利率债券,高利率债券,HYG,yahoo,n
+Risk Gauges,LQD,投资级债券,投资级债券,LQD,yahoo,n
 Risk Gauges,HYG/LQD,-,-,HYG/LQD,own,y
 Risk Gauges,JPY/USD,日元/美元,避险货币,JPYUSD=X,yahoo,y
 Risk Gauges,Gold,黄金,避险商品,GLD,yahoo,y
@@ -120,13 +120,13 @@ Industry,Consumer Disc.,-,-,XLY,yahoo,y
 Industry,Home Builders,房屋建筑商,-,XHB,yahoo,y
 Industry,Retail,零售,-,XRT,yahoo,y
 Industry,Consumer Staples,消费必需品,-,XLP,yahoo,y
-Industry,Energe,-,-,XLE,yahoo,y
+Industry,Energe,能源,-,XLE,yahoo,y
 Industry,Oil&Gas Explorator,-,-,XOP,yahoo,y
 Industry,Oil Service,-,-,OIH,yahoo,y
-Industry,Solar,-,-,TAN,yahoo,y
+Industry,Solar,太阳能,-,TAN,yahoo,y
 Industry,Nuclear,-,-,URA,yahoo,y
-Industry,Financial,-,-,XLF,yahoo,y
-Industry,Banks,-,-,KBE,yahoo,y
+Industry,Financial,金融,-,XLF,yahoo,y
+Industry,Banks,银行,-,KBE,yahoo,y
 Industry,Insurance,-,-,KIE,yahoo,y
 Industry,Brokers,-,-,IAI,yahoo,y
 Industry,Healthcare,-,-,XLV,yahoo,y

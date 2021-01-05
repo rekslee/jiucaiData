@@ -5,11 +5,11 @@ import copy
 import dash_table
 import dash_bootstrap_components as dbc
 import pandas as pd
-import os, sys
-path=os.path.abspath('.')   #表示当前所处的文件夹的绝对路径
-sys.path.append(path)
+import os
 from datas import sql_data, symbol_data
 from config.config import *
+
+path=os.path.abspath('.') 
 col = symbol_data.sp500_dict
 col['date'] = 'Date 日期'
 col['total'] = 'Total 总数'

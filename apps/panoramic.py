@@ -4,14 +4,13 @@ import dash_core_components as dcc
 import dash_bootstrap_components as dbc
 import dash_html_components as html
 import dash_daq as daq
-import os, sys
-path=os.path.abspath('.')   #表示当前所处的文件夹的绝对路径
-sys.path.append(path)
+import os
 from datas import sql_data
 from config.config import *
+import pandas as pd
 
-
-
+path=os.path.abspath('.') 
+dictDF = pd.read_csv(path + "/config/financial_data_dict.csv")
 
 def graph(df, table,linecolor='#34495E',bgcolor='transparent'):
     line_color = linecolor
@@ -144,10 +143,6 @@ def list_item(symbol_list,dictDF,datas):
     col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Thematic 专题板块'), color="success"), width=4),dbc.Row(the)]))
     col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Industry 行业板块'), color="dark"), width=4),dbc.Row(ind)]))
     return col_items
-
-
-dictDB = '{}/datas/db/{}.db'.format(path, config.get('database','data_dict'))
-dictDF = sql_data.readDB(dictDB, config.get('tablename','data_dict'))
 
 symbol_list = dictDF.loc[(dictDF['Display']=='y') &(dictDF['Symbol']!='-')]['Symbol'].tolist()
 symbol_list2 = dictDF.loc[(dictDF['Display']=='y') &(dictDF['Symbol']!='-')]['Symbol'].tolist()

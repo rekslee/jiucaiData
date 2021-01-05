@@ -1,12 +1,10 @@
 # -*- coding:utf-8 -*-
-import os, sys
-path = os.path.abspath('.')  #表示当前所处的文件夹的绝对路径
-sys.path.append(path)
+import os
+path=os.path.abspath('.') 
 import pandas as pd
 import datetime as dt
 import pandas_datareader as pdr
 from datas import stock_info, date, analysis, sql_data
-
 import numpy as np
 import yfinance as yf
 from config.config import *
@@ -24,19 +22,6 @@ sp500_dict = {
     'Information Technology': 'TEC 信息技术',
     'Utilities': 'UTL 公用事业',
 }
-# def finalDateToDB():
-
-
-def createDictToDB():
-    dict_data_columns = [
-        "Category", "Name", "Introduc", "Explanation", "Symbol", 'Data Source',
-        'Display'
-    ]
-    csv_path = path + "/config/financial_data_dict.csv"
-    data = pd.read_csv(csv_path, usecols=dict_data_columns)
-    data.dropna(inplace=True)
-    db = '{}/datas/db/{}.db'.format(path, config.get('database', 'data_dict'))
-    sql_data.dataToDB(db, data, config.get('tablename', 'data_dict'))
 
 
 def download(code, start, end, source='yahoo'):
@@ -56,9 +41,10 @@ def download(code, start, end, source='yahoo'):
 
 
 def updateFinanceToDB():
-    dict_db = '{}/datas/db/{}.db'.format(path, config.get('database', 'data_dict'))
+    # dict_db = '{}/datas/db/{}.db'.format(path, config.get('database', 'data_dict'))
     finance_db = '{}/datas/db/{}.db'.format(path,config.get('database', 'finance'))
-    dict_data = sql_data.readDB(dict_db, config.get('tablename', 'data_dict'))
+    # dict_data = sql_data.readDB(dict_db, config.get('tablename', 'data_dict'))
+    dict_data = pd.read_csv(path + "/config/financial_data_dict.csv")
     finance_list = dict_data["Symbol"].tolist()
     start = date.get_10year_ago()
     end = date.get_current_day()

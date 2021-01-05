@@ -1,29 +1,22 @@
 # -*- coding: utf-8 -*-
-
-# Run this app with `python app.py` and
-# visit http://127.0.0.1:8050/ in your web browser.
-
-# import dash
-# import dash_daq as daq
 import dash_core_components as dcc
 import dash_bootstrap_components as dbc
 import dash_html_components as html
-import os, sys
-path=os.path.abspath('.')   #表示当前所处的文件夹的绝对路径
-sys.path.append(path)
+import os
 from datas import sql_data, analysis
 from config.config import *
-financeDB = '{}/datas/db/{}.db'.format(path, config.get('database','finance'))
-dictDB = '{}/datas/db/{}.db'.format(path, config.get('database','data_dict'))
-dictDF =sql_data.readDB(dictDB, config.get('tablename','data_dict'))
+import pandas as pd
 
+path=os.path.abspath('.') 
+financeDB = '{}/datas/db/{}.db'.format(path, config.get('database','finance'))
+dictDF = pd.read_csv(path + "/config/financial_data_dict.csv")
 
 table_1 = 'CCSA'
 table_2 = 'ICSA'
 table_3 = 'WEI'
 table_4 = 'DGS10'
 table_5 = 'DGS5'
-table_6 = 'EFFR'
+table_6 = 'FEDFUNDS' 
 table_7 = 'CPIAUCSL'
 table_8 = '^TNX'  # 10年期国债收益
 table_9 = 'HG=F/GC=F'  # 铜
@@ -296,17 +289,14 @@ def card_content(data,title,body):
 
 page = dbc.Col([
         dbc.Row(
-            [   dbc.Col(dbc.Card(card_content(str(icsa[table_2].values[-1]/10000)+'（万人）',introduc2,Explanation1), color="primary", inverse=True,style={"width": "16rem"},), width=2),
-                dbc.Col(dbc.Card(card_content(str(ccsa[table_1].values[-1]/10000)+'（万人）',introduc1,Explanation2), color="danger", inverse=True,style={"width": "16rem"},), width=2),
+            [   dbc.Col(dbc.Card(card_content(str(icsa[table_2].values[-1]/10000)+'（万人）',introduc2,Explanation2), color="primary", inverse=True,style={"width": "16rem"},), width=2),
+                dbc.Col(dbc.Card(card_content(str(ccsa[table_1].values[-1]/10000)+'（万人）',introduc1,Explanation1), color="danger", inverse=True,style={"width": "16rem"},), width=2),
                 dbc.Col(dbc.Card(card_content(wei[table_3].values[-1],introduc3,Explanation3), color="dark", inverse=True,style={"width": "16rem"},), width=2),
                 dbc.Col(dbc.Card(card_content(cg[table_9].round(3).values[-1],introduc9,Explanation9), color="warning", inverse=True,style={"width": "16rem"},), width=2),
                 dbc.Col(dbc.Card(card_content(og[table_10].round(3).values[-1],introduc10,Explanation10), color="success", inverse=True,style={"width": "16rem"},), width=2),
             ],justify="between",),
-        html.Div(
-            [
-                html.Hr(),jobless_data_graph,
-                html.Hr(),wei_graph,
-                html.Hr(),abstract_graph,
-                html.Hr(),treasury_graph,
-            ],className="container")
+            html.Hr(),jobless_data_graph,
+            html.Hr(),wei_graph,
+            html.Hr(),abstract_graph,
+            html.Hr(),treasury_graph,
             ])

@@ -8,6 +8,7 @@ def checkTalbe(conn,table):
     result = cur.fetchone()
     cur.close()
     return result[0]
+    
 def dataToDB(db,data,table):
     if isinstance(data,list):
         conn = sqlite3.connect(db)

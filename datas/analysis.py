@@ -8,7 +8,6 @@ import pandas as pd
 
 def stock_ma(data, short, mid, long):
     data = data.set_index(["date"]).sort_index()
-    # close = data.close.values
     data.loc[:, "s_ma"] = data["close"].rolling(short).mean()
     data.loc[:, "m_ma"] = data["close"].rolling(mid).mean()
     data.loc[:, "l_ma"] = data["close"].rolling(long).mean()
