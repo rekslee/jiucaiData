@@ -11,7 +11,7 @@ from config.config import *
 
 sp500_dict = {
     'Communication Services': 'COM 通讯服务',
-    'Consumer Discretionary': 'CND 可选消费品',
+    'Consumer Discretionary': 'CND 可选消费',
     'Consumer Staples': 'CNS 消费品',
     'Energy': 'ENE 能源',
     'Financials': 'FIN 金融',

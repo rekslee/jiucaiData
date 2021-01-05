@@ -71,7 +71,7 @@ page = html.Div(
         data=df.to_dict('records'),
         style_header={'backgroundColor': 'gold','fontWeight': 'bold','textAlign': 'center','height': '60px','whiteSpace': 'normal',},
         style_table={'width': 'auto'},
-        style_cell={'width': '55px','fontSize': 18,'textAlign': 'center','height': '40px'},
+        style_cell={'width': '55px','fontSize': 18,'textAlign': 'center','height': '40px','font-family':'Segoe UI'},
         style_data_conditional=table_style(df),
         )
 
