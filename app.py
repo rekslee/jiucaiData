@@ -55,7 +55,7 @@ def serve_layout():
     return html.Div(children=[
     navbar,
     html.Br(),
-    dbc.Spinner(html.Div(id="loading-output")),
+    dbc.Spinner(html.Div(id="loading-output"),color="primary",size="lg",fullscreen=True),
     html.Div(children=[dcc.Location(id="url"),html.Div(id="page-content")],className="container-fluid"),
     jumbotron,
 ],id='serve-layout',className = 'p-5')
