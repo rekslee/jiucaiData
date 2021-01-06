@@ -11,7 +11,7 @@ from config.config import *
 
 path=os.path.abspath('.')   
 sys.path.append(path)
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True,title='韭菜数据--美股市场宽度和全景图',update_title='刷新中')
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True,title='韭菜数据--美股市场宽度和全景图',update_title='耐心等待...')
 
 navbar = dbc.NavbarSimple(
     children=[
