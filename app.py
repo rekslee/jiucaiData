@@ -23,6 +23,19 @@ navbar = dbc.NavbarSimple(
         dbc.NavItem(dbc.NavLink("数据字典", href="/page-5", id="page-5-link")),
         dbc.NavItem(dbc.NavLink("机器荐股", href="/page-6", id="page-6-link", disabled=True)),
         dbc.NavItem(dbc.NavLink("投资计划", href="/page-7", id="page-7-link", disabled=True)),
+        html.A(
+            # Use row and col to control vertical alignment of logo / brand
+            dbc.Row(
+                [
+                    dbc.Col(html.Img(src=path+'/img/GitHub32px.png', height="30px")),
+                    dbc.Col(dbc.NavbarBrand("GitHub", className="ml-2")),
+                ],
+                align="center",
+                no_gutters=True,
+            ),
+            href="https://github.com/rekslee/jiucaiData",
+        ),
+
     ],brand="韭菜数据",brand_href="/",
     color="dark",
     fixed = 'top',
