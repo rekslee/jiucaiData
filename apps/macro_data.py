@@ -295,8 +295,24 @@ page = dbc.Col([
                 dbc.Col(dbc.Card(card_content(cg[table_9].round(3).values[-1],introduc9,Explanation9), color="warning", inverse=True,style={"width": "16rem"},), width=2),
                 dbc.Col(dbc.Card(card_content(og[table_10].round(3).values[-1],introduc10,Explanation10), color="success", inverse=True,style={"width": "16rem"},), width=2),
             ],justify="between",),
-            html.Hr(),jobless_data_graph,
-            html.Hr(),wei_graph,
-            html.Hr(),abstract_graph,
-            html.Hr(),treasury_graph,
-            ])
+        html.Hr(),html.Br(),
+        dbc.ListGroupItem(
+            [
+                dbc.ListGroupItemHeading(html.H3('已发生的经济活动')),
+                dbc.ListGroupItemText(html.P('Jobs WEI Retail 数据为美国经济的真实情况。')),
+                dbc.ListGroupItemText(html.P('Retail 数据回头更新。')),
+            ]
+        ),
+        jobless_data_graph,
+        wei_graph,
+        html.Hr(),html.Br(),
+        dbc.ListGroupItem(
+            [
+                dbc.ListGroupItemHeading(html.H3('正在发生的经济活动')),
+                dbc.ListGroupItemText(html.P('Copper Oil 表达经济活动预期。')),
+                dbc.ListGroupItemText(html.P('Copper/Oil/Gold 含风险溢价的比率关系。')),
+            ]
+        ),
+        abstract_graph,
+        treasury_graph,
+        ])

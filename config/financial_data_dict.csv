@@ -9,7 +9,7 @@ Macro,Weekly Economic Index,经济指数,小于零经济衰退,WEI,fred,n
 Macro,CPI,居民物价消费指数,-,CPIAUCSL,fred,n
 Macro,10 Year Real Yield,10期国债收益,-,DGS10,fred,n
 Macro,5 Year Real Yield,5期国债收益,-,DGS5,fred,n
-Macro,Federal Funds Rate,联邦利率,-,FEDFUNDS,fred,y
+Macro,Federal Funds Rate,联邦利率,-,FEDFUNDS,fred,n
 Rates&Yields,Fed.Effective Rate,联邦利率,-,EFFR,fred,y
 Rates&Yields,UST 5Y Yield,5年期国债利率,5年期美元借贷利率,^FVX,yahoo,y
 Rates&Yields,UST 10Y Yield,10年期国债利率,10年期美元借贷利率,^TNX,yahoo,y
@@ -25,7 +25,7 @@ Supply & Demand,Stock ETF-Flow,股票ETF,股票ETF,-,-,n
 Supply & Demand,Bond ETF-Flow,债券ETF,债券ETF,-,-,n
 Risk Gauges,HYG,高利率债券,高利率债券,HYG,yahoo,n
 Risk Gauges,LQD,投资级债券,投资级债券,LQD,yahoo,n
-Risk Gauges,HYG/LQD,-,-,HYG/LQD,own,y
+Risk Gauges,HYG/LQD,高息/投资,-,HYG/LQD,own,y
 Risk Gauges,JPY/USD,日元/美元,避险货币,JPYUSD=X,yahoo,y
 Risk Gauges,Gold,黄金,避险商品,GLD,yahoo,y
 Risk Gauges,S&P 500 INDEX,标普500,标普500,^SPX,yahoo,n
@@ -44,7 +44,7 @@ Currency,EUR,欧元指数,-,EURUSD=X,yahoo,y
 Currency,JPY,日元指数,-,JPYUSD=X,yahoo,y
 Currency,GBP,英镑指数,-,GBPUSD=X,yahoo,y
 Currency,CAD,加元指数,-,CADUSD=X,yahoo,y
-Currency,MXN,模型比索指数,-,MXNUSD=X,yahoo,y
+Currency,MXN,墨西哥比索指数,-,MXNUSD=X,yahoo,y
 Currency,AUD,澳元指数,-,AUDUSD=X,yahoo,y
 Currency,VND,越南盾指数,-,VNDUSD=X,yahoo,y
 Currency,KRW,韩元指数,-,KRWUSD=X,yahoo,y
@@ -99,10 +99,10 @@ Growth or Value,S&P 500 Growth,标普500 成长,成长股,IVW,yahoo,y
 Growth or Value,S&P 500 Value,标普500 价值,价值股,IVE,yahoo,y
 Thematic,Wide Moat,-,-,MOAT,yahoo,y
 Thematic,CANSLIM,-,-,FFTY,yahoo,y
-Thematic,Online Retail,-,-,IBUY,yahoo,y
+Thematic,Online Retail,在线零售,-,IBUY,yahoo,y
 Thematic,Cyber Security,-,-,HACK,yahoo,y
 Thematic,Cloud,-,-,SKYY,yahoo,y
-Thematic,Mobile Payment,-,-,IPAY,yahoo,y
+Thematic,Mobile Payment,移动支付,-,IPAY,yahoo,y
 Thematic,FinTech,-,-,FINX,yahoo,y
 Thematic,Exponential Tech,-,-,XT,yahoo,y
 Thematic,Disruptive Innovation,-,-,ARKK,yahoo,y
@@ -110,9 +110,9 @@ Thematic,Robotics&A.I.,-,-,BOTZ,yahoo,y
 Thematic,Agribusiness,-,-,MOO,yahoo,y
 Thematic,Genomic Revolution,-,-,ARKG,yahoo,y
 Thematic,Marijuana,-,-,MJ,yahoo,y
-Thematic,Next Gen.  Internet,-,-,ARKW,yahoo,y
+Thematic,Next Gen.  Internet,下一代互联网技术,-,ARKW,yahoo,y
 Thematic,Autonomous Tech,-,-,ARKQ,yahoo,y
-Thematic,Clean Energy,-,-,PBW,yahoo,y
+Thematic,Clean Energy,清洁能源,-,PBW,yahoo,y
 Thematic,Blockchain Tech,-,-,BLOK,yahoo,y
 Thematic,Internet Of Thins,-,-,SNSR,yahoo,y
 Industry,Communications,通讯技术,-,XLC,yahoo,y

@@ -73,7 +73,8 @@ page = html.Div(
         style_table={'width': 'auto'},
         style_cell={'width': '55px','fontSize': 16,'textAlign': 'center','height': '50px','font-family':'Segoe UI'},
         style_data_conditional=table_style(df),
-        )
+        ),
+        html.Br(),
 
     ],
     className="container",)

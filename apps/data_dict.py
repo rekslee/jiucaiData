@@ -8,5 +8,6 @@ path=os.path.abspath('.')
 dict_data = pd.read_csv(path + "/config/financial_data_dict.csv")
 page = html.Div([
     dbc.Table.from_dataframe(dict_data, striped=True, bordered=True, hover=True,dark=True),
+    html.Br(),
 ],className="container")
 

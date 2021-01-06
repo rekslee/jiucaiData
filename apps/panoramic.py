@@ -129,23 +129,66 @@ def list_item(symbol_list,dictDF,datas):
         # datas.pop(i)
     del datas
     col_items = []
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Macro 宏观数据'), color="success"), width=4),dbc.Row(mac)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Rates&Yields 利率与收益'), color="primary"), width=4),dbc.Row(rat)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Risk Gauges 风险指数'), color="warning"), width=4),dbc.Row(ris)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Fundamental 基本面'), color="warning"), width=4),dbc.Row(fun)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Supply&Demand 需求与供给' ), color="danger"), width=4),dbc.Row(sup)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Currency 货币板块'), color="info"), width=4),dbc.Row(cur)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Energy 能源板块'), color="dark"), width=4),dbc.Row(ene)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Precious 贵金属板块'), color="primary"), width=4),dbc.Row(pre)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Metal 金属板块'), color="success"), width=4),dbc.Row(met)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Agriculture 农业板块'), color="danger"), width=4),dbc.Row(agr)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Index Market 市场指数'), color="info"), width=4),dbc.Row(bro)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Factors 因子ETF'), color="dark"), width=4),dbc.Row(fac)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Growth&or&Value 成长型与价值型ETF'), color="primary"), width=4),dbc.Row(gro)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Thematic 专题板块'), color="success"), width=4),dbc.Row(the)]))
-    col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Industry 行业板块'), color="dark"), width=4),dbc.Row(ind)]))
+
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Rates&Yields 利率与收益'),color="primary",id='rates-p' ), width=4),
+        dbc.Tooltip('资金成本的短期变化 Capitol movement',target="rates-p",placement="right"),
+        dbc.Row(rat)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Risk Gauges 风险偏好'), color="warning",id='risk-p' ), width=4),
+        dbc.Tooltip('风险偏好 Capitol movement',target="risk-p",placement="right"),
+        dbc.Row(ris)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Fundamental 基本面'), color="warning",id='fundamental-p' ), width=4),
+        dbc.Tooltip('经济基本面预期 Capitol movement',target="fundamental-p",placement="right"),
+        dbc.Row(fun)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Supply&Demand 需求与供给' ), color="danger",id='supply-p' ), width=4),
+        dbc.Tooltip('资金在市场中运动的方向 Capitol movement',target="supply-p",placement="right"),
+        dbc.Row(sup)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Currency 货币板块'), color="info",id='currency-p' ), width=4),
+        dbc.Tooltip('美元供需情况 Capitol movement',target="currency-p",placement="right"),
+        dbc.Row(cur)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Energy 能源板块'), color="dark",id='energy-p' ), width=4),
+        dbc.Tooltip('供需情况，对未来经济活动的预期 Economic activities',target="energy-p",placement="right"),
+        dbc.Row(ene)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Precious 贵金属板块'), color="primary",id='precious-p' ), width=4),
+        dbc.Tooltip('供需情况，对未来经济活动的预期 Economic activities',target="precious-p",placement="right"),
+        dbc.Row(pre)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Metal 金属板块'), color="success",id='metal-p' ), width=4),
+        dbc.Tooltip('供需情况，对未来经济活动的预期 Economic activities',target="metal-p",placement="right"),
+        dbc.Row(met)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Agriculture 农业板块'), color="danger",id='agriculture-p' ), width=4),
+        dbc.Tooltip('供需情况，对未来经济活动的预期 Economic activities',target="agriculture-p",placement="right"),
+        dbc.Row(agr)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Broad Market 市场指数'), color="info",id='market-p' ), width=4),
+        dbc.Tooltip('少数 or 多数 Market Driver',target="market-p",placement="right"),
+        dbc.Row(bro)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Factors 因子ETF'), color="dark",id='factors-p' ), width=4),
+        dbc.Tooltip('投机 or 投资 Market Driver',target="factors-p",placement="right"),
+        dbc.Row(fac)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Growth&or&Value 成长型与价值型ETF'), color="primary",id='growth-p' ), width=4),
+        dbc.Tooltip('成长 or 价值 Market Driver',target="growth-p",placement="right"),
+        dbc.Row(gro)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Thematic 概念板块'), color="success",id='thematic-p' ), width=4),
+        dbc.Tooltip('概念股 Market Driver',target="thematic-p",placement="top"),
+        dbc.Row(the)]))
+    col_items.append(dbc.Col([
+        dbc.Col(dbc.Alert(html.H4('Industry 行业板块'), color="dark",id='industry-p' ), width=4),
+        dbc.Tooltip('行业 Market Driver',target="industry-p",placement="right"),
+        dbc.Row(ind)]))
     return col_items
 
+        
 symbol_list = dictDF.loc[(dictDF['Display']=='y') &(dictDF['Symbol']!='-')]['Symbol'].tolist()
 symbol_list2 = dictDF.loc[(dictDF['Display']=='y') &(dictDF['Symbol']!='-')]['Symbol'].tolist()
 

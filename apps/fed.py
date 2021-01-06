@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import dash_core_components as dcc
+import dash_bootstrap_components as dbc
 import dash_html_components as html
 import os
 from datas import sql_data
@@ -116,6 +117,14 @@ liq_swap_graph = dcc.Graph(
     id='swpt_graph',
 )
 
-page = html.Div(children=[fed_assets_graph,
-                          html.Hr(), liq_swap_graph],
+page = html.Div(children=[
+    dbc.ListGroupItem(
+        [
+            dbc.ListGroupItemHeading(html.H3('美联储干预市场的力度')),
+            dbc.ListGroupItemText(html.P('Glod Holdings 与 U.S All Rates数据以后更新。')),
+        ]
+    ),
+    fed_assets_graph,
+    html.Hr(), 
+    liq_swap_graph],
                 className="container")
