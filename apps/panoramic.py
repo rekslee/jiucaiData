@@ -127,7 +127,7 @@ def list_item(symbol_list,dictDF,datas):
         if category == 'Industry':
             ind.append(dbc.Col(item(i,name, pcd, introduc, cur_price, pre_price, graph(data,symbol),graph(data,'rel',linecolor='Orange')), width=4))
         # datas.pop(i)
-    # del datas
+    del datas
     col_items = []
     col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Macro 宏观数据'), color="success"), width=4),dbc.Row(mac)]))
     col_items.append(dbc.Col([dbc.Col(dbc.Alert(html.H4('Rates&Yields 利率与收益'), color="primary"), width=4),dbc.Row(rat)]))

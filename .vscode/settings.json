@@ -30,5 +30,7 @@
         "venv.bak{,/**}",
         ".vscode{,/**}"
     ],
-    "appService.defaultWebAppToDeploy": "None"
+    "appService.defaultWebAppToDeploy": "None",
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
 }
