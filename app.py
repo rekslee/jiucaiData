@@ -15,7 +15,7 @@ app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_ca
 
 navbar = dbc.NavbarSimple(
     children=[
-        dcc.Interval(id="time-interval", n_intervals=0, interval=1000*60*60*0.5),
+        dcc.Interval(id="time-interval", n_intervals=0, interval=1000*60*60*2),
         dbc.NavItem(dbc.NavLink("宏观经济",href="/page-1",active=True,id="page-1-link")),
         dbc.NavItem(dbc.NavLink("联储数据", href="/page-2", id="page-2-link")),
         dbc.NavItem(dbc.NavLink("市场宽度", href="/page-3", id="page-3-link")),
