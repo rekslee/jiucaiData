@@ -27,7 +27,7 @@ navbar = dbc.NavbarSimple(
             # Use row and col to control vertical alignment of logo / brand
             dbc.Row(
                 [
-                    dbc.Col(html.Img(src=path+'/img/GitHub32px.png', height="30px")),
+                    dbc.Col(html.Img(src='https://robotics.upc.edu/en/software/github-mark-light-32px-1.png', height="30px"), className="ml-5"),
                     dbc.Col(dbc.NavbarBrand("GitHub", className="ml-2")),
                 ],
                 align="center",
