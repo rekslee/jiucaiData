@@ -15,7 +15,7 @@ app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_ca
 
 navbar = dbc.NavbarSimple(
     children=[
-        dcc.Interval(id="time-interval", n_intervals=0, interval=1000*60*60*2),
+        dcc.Interval(id="time-interval", n_intervals=1, interval=1000*60*60*1),
         dbc.NavItem(dbc.NavLink("宏观经济",href="/page-1",active=True,id="page-1-link")),
         dbc.NavItem(dbc.NavLink("联储数据", href="/page-2", id="page-2-link")),
         dbc.NavItem(dbc.NavLink("市场宽度", href="/page-3", id="page-3-link")),
@@ -60,7 +60,7 @@ app.layout = html.Div(children=[
 ],id='serve-layout',className = 'p-5')
 
 # 定时更新数据库
-@app.callback(Output("update-time", "children"),Input("time-interval", "n_intervals"),prevent_initial_call=True)
+@app.callback(Output("update-time", "children"),Input("time-interval", "n_intervals"))
 def update_progress(n):
     symbol_data.update_data()
     return '数据源来自Fred&Yahoo Finance,更新时间:{}'.format(date.now())

@@ -232,8 +232,7 @@ def update_data():
 if __name__ == '__main__':
 
     # updateStockToDB()
-    createDictToDB()
-    # update_data()
+    update_data()
     # getSpxInfo()
     # createMarketBreadthToDB()
     # market_breadth_db = '{}/datas/db/{}.db'.format(path, config.get('database','market_breadth'))
