@@ -62,8 +62,8 @@ def updateFinanceToDB():
         if data_source == '-' or symbol == '-':
             finance_list.pop(0)
             continue
-        if data_source == 'own':
-            # print('更新own金融数据')
+        if data_source == 'custom':
+            # print('更新custom金融数据')
             symbol_names = symbol.split("/")
             data_1 = sql_data.readDB(finance_db, symbol_names[0])
             data_1.sort_index(inplace=True)

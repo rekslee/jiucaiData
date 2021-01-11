@@ -25,20 +25,20 @@ Supply & Demand,Stock ETF-Flow,股票ETF,股票ETF,-,-,n
 Supply & Demand,Bond ETF-Flow,债券ETF,债券ETF,-,-,n
 Risk Gauges,HYG,高利率债券,高利率债券,HYG,yahoo,n
 Risk Gauges,LQD,投资级债券,投资级债券,LQD,yahoo,n
-Risk Gauges,HYG/LQD,高息/投资,-,HYG/LQD,own,y
+Risk Gauges,HYG/LQD,高息/投资,-,HYG/LQD,custom,y
 Risk Gauges,JPY/USD,日元/美元,避险货币,JPYUSD=X,yahoo,y
 Risk Gauges,Gold,黄金,避险商品,GLD,yahoo,y
 Risk Gauges,S&P 500 INDEX,标普500,标普500,^SPX,yahoo,n
 Risk Gauges,Banks,银行,-,^BKX,yahoo,n
-Risk Gauges,Banks/SPX,银行/标普,银行/标普,^BKX/^SPX,own,y
+Risk Gauges,Banks/SPX,银行/标普,银行/标普,^BKX/^SPX,custom,y
 Risk Gauges,Real Estate,房产,-,VNQ,yahoo,n
-Risk Gauges,Real Estate/SPX,房产/标普,房产/标普,VNQ/^SPX,own,y
+Risk Gauges,Real Estate/SPX,房产/标普,房产/标普,VNQ/^SPX,custom,y
 Risk Gauges,Trans.,交通,-,XTN,yahoo,n
-Risk Gauges,Trans./SPX,交通/标普,交通/标普,XTN/^SPX,own,y
+Risk Gauges,Trans./SPX,交通/标普,交通/标普,XTN/^SPX,custom,y
 Risk Gauges,High Div,高分红股票,风险,HDV,yahoo,n
-Risk Gauges,High Div./SPX,高分红股票/标普,风险,HDV/^SPX,own,y
+Risk Gauges,High Div./SPX,高分红股票/标普,风险,HDV/^SPX,custom,y
 Risk Gauges,High Yield,高收益股票,风险,HYG,yahoo,n
-Risk Gauges,High Yield/SPX,高收益股票/标普,风险,HYG/^SPX,own,y
+Risk Gauges,High Yield/SPX,高收益股票/标普,风险,HYG/^SPX,custom,y
 Currency,USD Index,美元指数,-,DX-Y.NYB,yahoo,y
 Currency,EUR,欧元指数,-,EURUSD=X,yahoo,y
 Currency,JPY,日元指数,-,JPYUSD=X,yahoo,y
@@ -65,8 +65,8 @@ Metal,LME Aluminum,伦铝,需求,-,-,y
 Metal,LME Lead,伦铅,需求,-,-,y
 Metal,LME Nickel,伦镍,需求,-,-,y
 Metal,LME Tin,伦锡,需求,-,-,y
-Fundamental,Oil/Gold,油金比,通胀预期,CL=F/GC=F,own,y
-Fundamental,Copper/Gold,铜金比,经济活跃度,HG=F/GC=F,own,y
+Fundamental,Oil/Gold,油金比,通胀预期,CL=F/GC=F,custom,y
+Fundamental,Copper/Gold,铜金比,经济活跃度,HG=F/GC=F,custom,y
 Fundamental,Eco. Surprise,经济预期,经济预期,-,-,y
 Fundamental,Eco. Uncertainty,经济不确定性,经济不确定性,USEPUINDXD,fred,y
 Agriculture,Corn,玉米,供给,ZC=F,yahoo,y
@@ -97,59 +97,59 @@ Growth or Value,Russell 1000 Growth,罗素1000 成长,成长股,IWF,yahoo,y
 Growth or Value,Russell 1000 Value,罗素1000 价值,价值股,IWD,yahoo,y
 Growth or Value,S&P 500 Growth,标普500 成长,成长股,IVW,yahoo,y
 Growth or Value,S&P 500 Value,标普500 价值,价值股,IVE,yahoo,y
-Thematic,Wide Moat,-,-,MOAT,yahoo,y
-Thematic,CANSLIM,-,-,FFTY,yahoo,y
-Thematic,Online Retail,在线零售,-,IBUY,yahoo,y
-Thematic,Cyber Security,-,-,HACK,yahoo,y
-Thematic,Cloud,-,-,SKYY,yahoo,y
-Thematic,Mobile Payment,移动支付,-,IPAY,yahoo,y
-Thematic,FinTech,-,-,FINX,yahoo,y
-Thematic,Exponential Tech,-,-,XT,yahoo,y
-Thematic,Disruptive Innovation,-,-,ARKK,yahoo,y
-Thematic,Robotics&A.I.,-,-,BOTZ,yahoo,y
-Thematic,Agribusiness,-,-,MOO,yahoo,y
-Thematic,Genomic Revolution,-,-,ARKG,yahoo,y
-Thematic,Marijuana,-,-,MJ,yahoo,y
-Thematic,Next Gen.  Internet,下一代互联网技术,-,ARKW,yahoo,y
-Thematic,Autonomous Tech,-,-,ARKQ,yahoo,y
-Thematic,Clean Energy,清洁能源,-,PBW,yahoo,y
-Thematic,Blockchain Tech,-,-,BLOK,yahoo,y
-Thematic,Internet Of Thins,-,-,SNSR,yahoo,y
+Thematic,Wide Moat,宽护城河ETF(具有竞争优势的企业),-,MOAT,yahoo,y
+Thematic,CANSLIM,创新型ETF,-,FFTY,yahoo,y
+Thematic,Online Retail,在线零售ETF,-,IBUY,yahoo,y
+Thematic,Cyber Security,网络安全ETF,-,HACK,yahoo,y
+Thematic,Cloud,云计算ETF,-,SKYY,yahoo,y
+Thematic,Mobile Payment,移动支付ETF,-,IPAY,yahoo,y
+Thematic,FinTech,金融科技ETF,-,FINX,yahoo,y
+Thematic,Exponential Tech,指数科技ETF(包含AI，AR，VR等),-,XT,yahoo,y
+Thematic,Disruptive Innovation,ARK-K颠覆性创新,-,ARKK,yahoo,y
+Thematic,Robotics&A.I.,机器人和人工智能ETF,-,BOTZ,yahoo,y
+Thematic,Agribusiness,农业ETF,-,MOO,yahoo,y
+Thematic,Genomic Revolution,ARK-G基因革命,-,ARKG,yahoo,y
+Thematic,Marijuana,大麻ETF,-,MJ,yahoo,y
+Thematic,Next Gen.  Internet,ARK-W下一代互联网,-,ARKW,yahoo,y
+Thematic,Autonomous Tech,ARK-Q自动化技术,-,ARKQ,yahoo,y
+Thematic,Clean Energy,清洁能源ETF,-,PBW,yahoo,y
+Thematic,Blockchain Tech,区块链,-,BLOK,yahoo,y
+Thematic,Internet Of Thins,物联网,-,SNSR,yahoo,y
 Industry,Communications,通讯技术,-,XLC,yahoo,y
-Industry,Consumer Disc.,-,-,XLY,yahoo,y
-Industry,Home Builders,房屋建筑商,-,XHB,yahoo,y
+Industry,Consumer Disc.,可选消费,-,XLY,yahoo,y
+Industry,Home Builders,房屋建筑,-,XHB,yahoo,y
 Industry,Retail,零售,-,XRT,yahoo,y
-Industry,Consumer Staples,消费必需品,-,XLP,yahoo,y
+Industry,Consumer Staples,刚需消费,-,XLP,yahoo,y
 Industry,Energe,能源,-,XLE,yahoo,y
-Industry,Oil&Gas Explorator,-,-,XOP,yahoo,y
-Industry,Oil Service,-,-,OIH,yahoo,y
+Industry,Oil&Gas Explorator,石油天然气开采,-,XOP,yahoo,y
+Industry,Oil Service,石油服务,-,OIH,yahoo,y
 Industry,Solar,太阳能,-,TAN,yahoo,y
-Industry,Nuclear,-,-,URA,yahoo,y
+Industry,Nuclear,核能,-,URA,yahoo,y
 Industry,Financial,金融,-,XLF,yahoo,y
 Industry,Banks,银行,-,KBE,yahoo,y
-Industry,Insurance,-,-,KIE,yahoo,y
-Industry,Brokers,-,-,IAI,yahoo,y
-Industry,Healthcare,-,-,XLV,yahoo,y
-Industry,Biotech,-,-,IBB,yahoo,y
-Industry,Medical Devices,-,-,IHI,yahoo,y
-Industry,Healthcare Providers,-,-,IHF,yahoo,y
-Industry,Pharmaceuticals,-,-,XPH,yahoo,y
-Industry,Industrials,-,-,XLI,yahoo,y
-Industry,Aero&Defence,-,-,ITA,yahoo,y
-Industry,Transportation,-,-,IYT,yahoo,y
-Industry,Global Jets,-,-,JETS,yahoo,y
-Industry,Materials,-,-,XLB,yahoo,y
-Industry,Gold Miners,-,-,GDX,yahoo,y
-Industry,Metals Mining,-,-,XME,yahoo,y
-Industry,Lithium Battery,-,-,LIT,yahoo,y
-Industry,Real Estate,-,-,XLRE,yahoo,y
-Industry,REIT US,-,-,VNQ,yahoo,y
-Industry,REIT Global ex.US,-,-,VNQI,yahoo,y
-Industry,Mortgage,-,-,REM,yahoo,y
-Industry,Technologe,-,-,XLK,yahoo,y
-Industry,I.T.,-,-,VGT,yahoo,y
-Industry,Internet,-,-,FDN,yahoo,y
-Industry,Social Media,-,-,SOCL,yahoo,y
-Industry,Software & SaaS,-,-,IGV,yahoo,y
-Industry,Semiconductors,-,-,SOXX,yahoo,y
-Industry,Utilities,-,-,XLU,yahoo,y
+Industry,Insurance,保险,-,KIE,yahoo,y
+Industry,Brokers,经纪人,-,IAI,yahoo,y
+Industry,Healthcare,医疗健康,-,XLV,yahoo,y
+Industry,Biotech,生物技术,-,IBB,yahoo,y
+Industry,Medical Devices,医疗设备,-,IHI,yahoo,y
+Industry,Healthcare Providers,医保供应商,-,IHF,yahoo,y
+Industry,Pharmaceuticals,制药,-,XPH,yahoo,y
+Industry,Industrials,工业,-,XLI,yahoo,y
+Industry,Aero&Defence,国防航天,-,ITA,yahoo,y
+Industry,Transportation,运输,-,IYT,yahoo,y
+Industry,Global Jets,全球喷气机,-,JETS,yahoo,y
+Industry,Materials,材料,-,XLB,yahoo,y
+Industry,Gold Miners,金矿,-,GDX,yahoo,y
+Industry,Metals Mining,金属开采,-,XME,yahoo,y
+Industry,Lithium Battery,锂电池,-,LIT,yahoo,y
+Industry,Real Estate,房地产,-,XLRE,yahoo,y
+Industry,REIT US,地产投资,-,VNQ,yahoo,y
+Industry,REIT Global ex.US,全球房地产投资 ex 美国,-,VNQI,yahoo,n
+Industry,Mortgage,抵押贷款,-,REM,yahoo,y
+Industry,Technologe,科技,-,XLK,yahoo,y
+Industry,I.T.,IT,-,VGT,yahoo,y
+Industry,Internet,互联网,-,FDN,yahoo,y
+Industry,Social Media,社交媒体,-,SOCL,yahoo,y
+Industry,Software & SaaS,软件&SaaS,-,IGV,yahoo,y
+Industry,Semiconductors,半导体,-,SOXX,yahoo,y
+Industry,Utilities,公共事业,-,XLU,yahoo,y
