@@ -5,8 +5,8 @@ import pandas_datareader as pdr
 import datetime as dt
 import pandas as pd
 import os
-# import sys
 path = os.path.abspath('.')
+# import sys
 # sys.path.append(path)
 
 from datas import stock_info, date, analysis, sql_data
@@ -178,8 +178,7 @@ def updateMarketBreadthToDB():
     df = analysis.market_breadth_analysis(spx_info_data, df)
     # 保存marketDB
     market_breadth_db = '{}/datas/db/{}.db'.format(path, config.get('database', 'market_breadth'))
-    sql_data.dataToDB(market_breadth_db, df, config.get(
-        'tablename', 'market_breadth'))
+    sql_data.dataToDB(market_breadth_db, df, config.get('tablename', 'market_breadth'))
 
 
 def updateStockToDB():

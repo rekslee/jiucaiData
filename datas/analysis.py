@@ -119,6 +119,7 @@ def market_breadth_analysis(spx_info,data):
     for key in keys:
         data[key] = (data[key]/spSector[key]*100).round(0).astype(int)
     data["total"] = data.sum(axis=1)
+    data.drop(data[data.total < 0.01].index, inplace=True)
     data['date'] = pd.to_datetime(data.index, format="%Y-%m-%d")
     
     return data
