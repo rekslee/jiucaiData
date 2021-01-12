@@ -11,7 +11,7 @@ from config.config import *
 
 path=os.path.abspath('.')   
 sys.path.append(path)
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True,title='韭菜数据--美股市场宽度和全景图',update_title='耐心等待...')
+app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP],suppress_callback_exceptions=True,title='韭菜数据--美股市场宽度和全景图',update_title='Updating...')
 
 navbar = dbc.NavbarSimple(
     children=[
@@ -62,8 +62,11 @@ app.layout = html.Div(children=[
 # 定时更新数据库
 @app.callback(Output("update-time", "children"),Input("time-interval", "n_intervals"))
 def update_progress(n):
-    symbol_data.update_data()
-    return '数据源来自Fred&Yahoo Finance,更新时间:{}'.format(date.now())
+    print(n)
+    if n>1:
+        symbol_data.update_data()
+        return '数据源来自Fred&Yahoo Finance，数据更新时间:{}'.format(date.now())
+    return '数据源来自Fred&Yahoo Finance'
 
 # 初始化页面
 @app.callback(
