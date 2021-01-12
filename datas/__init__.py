@@ -1,3 +1,6 @@
+# import os, sys
+# path=os.path.abspath('.')   
+# sys.path.append(path)
 from .analysis import *
 from .symbol_data import *
 from .date import *

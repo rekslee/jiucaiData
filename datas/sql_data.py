@@ -41,7 +41,7 @@ def readDB(db,table,num=0):
                 table_cmd=sql_cmd.replace('tablename',symbol)
                 data_list.append(pd.read_sql(sql=table_cmd, con=conn))
             else:
-                data_list.append(None)
+                data_list.append(symbol)
             table.pop(0)
         conn.close()
         return data_list

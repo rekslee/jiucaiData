@@ -139,7 +139,7 @@ def stock_analysis(data, short=20, mid=60, long=120):
     data = stock_turn_up(data, "m", mid)
     data = stock_turn_up(data, "l", long)
     data['is_above_s_ma']= (data['close']>data['s_ma']).astype(int)
-    
+    data['is_above_s_ma']=data['is_above_s_ma'].fillna(0)
     return data
 
 def updateFinanceData(code,vti,data,old_data=None):
